@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Lig-4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lig4 05_S5</h1>
+        <img src="logo.jpg">
+    </header>
+        <audio id="cachorres" src="musica_de_batalha_do_naruto_em_cachorres.mp3" loop="true" autoplay></audio>
+    <main id = "teste">
+        <section id="instruct">
+            <h2>Lig4 CATS</h2>
+            <p>
+                No Lig-4, um jogador assume o gatinho branco e o outro assume o gatinho rajado.
+                Os jogadores se alternam inserindo seus gatinhos em uma das 7 colunas de uma tabela 7x6.
+                O primeiro jogador que conseguir quatro de seus gatinhos em uma linha (seja horizontal,
+                vertical ou diagonal) vence.
+            </p>
+            <h3>Regras :</h3>
+            <ul>
+                <li>Player 1 inicia o jogo.</li>
+                <li>Escolha seu gatinho.</li>
+                <li>Para dar empate voce precisa completar
+                    o tabuleiro de gatinhos.
+                </li>
+
+            </ul>
+        </section>
+        
+        <section id="jogo">
+            <div id="jogadores">
+                <div id="player1">
+                    <audio id="audiocat1" src="miado1.wav"></audio>
+                    <div id="gatinho1" class="borderGatinho1"> 
+                    </div>
+                    <p id="jogador1">
+                        Player 1
+                    </p>
+                </div>
+
+                <div id="vs">
+                    <img src="img/vs.png" alt="vs" width="60px">
+                </div>
+                <audio id="audiocat2" src="miado2.wav"></audio>
+                <div id="player2">
+                    <div id="gatinho2"></div>
+                    <p id="jogador2">
+                        Player 2
+                    </p>
+                </div>
+            </div>
+         
+            <div id="board"></div>
+            <div id="even" class="hidden"></div>
+        </section>
+    </main>
+
+    <div id="victory1" class="hidden">
+        <p>Player 1 ganhou!! <br> Jogar novamente?</p>
+        <img src="img/vitoria.png" alt="vitoria">
+        <input id="btnreset1" class="btn" type="button" value="reset">
+    </div>
+
+    <div id="victory2" class="hidden">
+        <p>Player 2 ganhou!! <br> Jogar novamente?</p>
+        <img src="img/vitoria2.png" alt="vitoria2">
+        <input id="btnreset2" class="btn" type="button" value="reset">
+    </div>
+
+    <div id = "drawn" class="drawn hidden" >
+        <audio id="audiocat3" src="miado3.wav"></audio>
+        <p id="textempate">Meow... Empatou!<br>jogar novamente?</p>
+        <img src="img/empate.png" alt="bongocat">
+        <input id="btnreset" class="btn" type="button" value="Resetar">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

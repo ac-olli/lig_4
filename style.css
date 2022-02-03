@@ -1,0 +1,460 @@
+:root {
+    --fontFam: 'neon';
+    --corFont: rgb(54, 54, 54);
+    --corApoio: rgba(14, 14, 14, 0.5);
+}
+
+@keyframes mybutton {
+    from {background-color: #b983c9;}
+    to {background-color: #85f0c9;}
+  }
+
+body {
+    font-family: var(--fontFam);
+    color: var(--corFont);
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg,#121013, #4d375d, #eb596e, #ee3960);
+    background-size: 600% 600%;
+    animation: colors 10s ease infinite;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--corApoio);
+}
+
+header img {
+    width: 50px;
+}
+
+header h1 {
+    font-size: 21px;
+    margin: 5px 20px;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+#instruct {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px;
+    background-color: rgba(253, 253, 253, 0.5);
+    border: 3px solid rgb(120, 141, 255);
+    box-shadow: 10px 10px 30px rgba(36, 69, 255, 0.8);
+    border-radius: 10%;
+}
+
+#instruct h2 {
+    font-size: 30px;
+    margin: 20px 0 5px;
+}
+
+#instruct p {
+    font-size: 20px;
+    width: 250px;
+    margin: 5px 0 20px;
+}
+#instruct h3 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+#instruct ul {
+    width: 250px;
+    margin: 0 0 20px 0;
+    font-size: 20px;
+}
+
+/* JOGO */
+
+#jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px ;
+}
+
+#jogadores {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    font-family: ;
+    font-size: 24px;
+}
+
+#jogador1 {
+    margin: 10px 0;
+    font-size: 30px;
+    color: rgb(255, 133, 200);
+    text-shadow: 0px 0px 7px rgb(226, 22, 134);
+}
+
+#jogador2 {
+    margin: 10px 0;
+    font-size: 30px;
+    color: rgb(110, 255, 110);
+    text-shadow: 0px 0px 7px rgb(30, 253, 30);
+    
+}
+
+#player1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gatinho1 {
+    background-image: url(img/ballblack.png);
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    margin: 0 10px;
+} 
+
+#gatinho2 {
+    background-image: url(img/ballred.png);
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    margin: 0 10px;
+} 
+
+#vs {
+    
+    height: auto;
+    width: 60px;
+    margin-top: 10px;
+}
+
+.ballRed {
+    background-image: url(img/ballred.png);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+
+.ballBlack {
+    background-image: url(img/ballblack.png);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+
+#board {
+    display: flex;
+    flex-direction: row;
+}
+
+.columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.celulas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgb(169, 252, 252);
+    border-radius: 20%;
+    box-shadow: 5px 5px 20px rgb(1, 255, 255);
+}
+
+.hidden{
+    display: none;
+}
+
+.borderGatinho1{
+   
+    border:rgb(255, 133, 200) solid 5px;
+    border-radius:20px;
+    box-shadow: 0px 0px 7px rgb(226, 22, 134);
+    transition: all 0.3s;
+    transform: scale(1.2);
+
+}
+
+.borderGatinho2{
+
+    border:rgb(110, 255, 110) solid 5px;
+    border-radius:20px;
+    box-shadow: 0px 0px 7px rgb(30, 253, 30);
+    transition: all 0.3s;
+	transform: scale(1.2);
+
+}
+
+/* VITORIA PLAYER 1 */
+
+#victory1 {
+    background-image: url(https://media.giphy.com/media/l2JJDdD7cv4xdGGis/giphy.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    color: rgb(225, 0, 255);
+    font-size: 35px;
+}
+
+#victory1 p {
+    margin: 0;
+    text-align: center;
+    background-color: rgba(7, 7, 7, 0.8);
+    text-shadow: 5px 5px 20px rgb(153, 24, 170);
+}
+
+#victory1 img {
+
+    width: 300PX;
+    margin-left: 10px;
+}
+
+.btn {
+    width: 30vw;
+    height: 60px;
+    color: rgb(255, 151, 246);
+    text-shadow: 0px 0px 10px #e402d9;
+    background-color: white;
+    font-size: 30px;
+    font-family:neon ;
+    animation: mybutton 5s infinite;
+    border-radius: 5px;
+    border-color: rgb(44, 161, 60) ;
+    box-shadow: 5px 4px 30px rgb(44, 161, 60);
+    position: absolute;
+    top: 80%;
+    left: 35%;
+}
+
+#btnreset2 {
+    top: 80%;
+}
+
+/* VITORIA PLAYER 2 */
+
+#victory2 {
+    background-image: url(https://media.giphy.com/media/BzyTuYCmvSORqs1ABM/giphy.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    color: rgb(225, 0, 255);
+    font-size: 35px;
+}
+
+#victory2 p {
+    margin: 0;
+    text-align: center;
+    background-color: rgba(7, 7, 7, 0.8);
+    text-shadow: 5px 5px 20px rgb(153, 24, 170);
+}
+
+#victory2 img {
+    width: 300PX;
+    
+}
+
+.drawn {
+    background-image: url(https://media.giphy.com/media/G3773sSDJHHy0/giphy.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    color: rgb(225, 0, 255);
+    font-size: 35px;
+}
+
+#textempate{
+    margin: 0;
+    text-align: center;
+    background-color: rgba(7, 7, 7, 0.8);
+    text-shadow: 5px 5px 20px rgb(153, 24, 170);
+}
+
+.drawn img {
+    width: 200px;
+    margin-top: 30px;
+}
+
+/* TELAS */
+
+@media only screen and (min-width: 768px) {
+    #victory1 img {
+        position: absolute;
+        left: 30%;
+    }
+
+    #victory2 img {
+        position: absolute;
+        left: 30%;
+    }
+
+    .drawn img {
+        width: 400px;
+        position: absolute;
+        top: 10%;
+        left: 25%;
+    }
+
+    .btn {
+        width: 100px;
+        left: 45%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    body{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    main {
+        flex-direction: row;
+    }
+
+    #jogo {
+        margin: 50px 20px 20px;
+        flex-direction: row;
+    }
+
+    #jogadores {
+        flex-direction: column;
+        align-items: center;
+    }    
+
+    #jogador2 {
+        margin: 10px 0;
+    }
+
+    #player2 {
+        flex-direction: column-reverse;
+       
+    }
+
+    #gatinho1 {
+        width: 70px;
+    }
+
+    #gatinho2 {
+        width: 70px;
+    }
+
+    .celulas {
+        width: 70px;
+        height: 70px;
+        
+    }
+    .ballBlack {
+        width: 40px;
+    }
+
+    .ballRed {
+        width: 40px;
+    }
+
+    .drawn {
+       
+    }
+
+    .drawn img {
+        width: 500px;
+        position: absolute;
+        left: 30%;
+    }
+
+    #textempate{
+       
+    }
+
+    #victory1 {
+        height: 100vh;
+    }
+
+    #victory1 img {
+        position: absolute;
+        top: 20%;
+        left: 35%;
+        width: 400px;
+    }
+
+    #victory2 {
+        height: 100vh;
+    }
+
+    #victory2 img {
+        position: absolute;
+        top: 20%;
+        left: 35%;
+        width: 400px;
+        border-radius: 100%;
+    }
+
+    .btn {
+        width: 100px;
+        top: 85%;
+        left: 45%;
+    }
+
+    #victory2 {
+        height: 100vh;
+    }
+
+    #victory2 img {
+        position: absolute;
+        top: 20%;
+        left: 35%;
+        width: 400px;
+    }
+
+}
+
+
+/* ANIMAÇÃO */
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@font-face {
+    src: url(font/neon.ttf);
+    font-family: "neon";
+}
